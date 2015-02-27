@@ -7,7 +7,13 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface GameScene : SKScene
+@interface GameScene : SKScene <SKPhysicsContactDelegate>
+
+@property (nonatomic) BOOL battleWon;
+@property (nonatomic) int numberOfPlayers;
+@property (strong, nonatomic) AVAudioPlayer *musicPlayer;
+@property (strong, nonatomic) AVAudioPlayer *soundPlayer;
 
 @end
